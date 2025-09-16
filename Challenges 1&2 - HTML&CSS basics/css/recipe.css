@@ -1,0 +1,109 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dish-container{
+    width: 350px;
+    border-radius: 20px;
+    background-color: var(--element-bg-color);
+    box-shadow: 0 10px 10px rgb(69, 93, 127, 0.2);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.dish-container .dish-image-container{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.dish-container .dish-image-container .dish-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-container .dish-informations-container{
+    position: relative;
+    padding: 35px 20px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dish-container .dish-informations-container::before{
+    content: "recette du moment";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 15px;
+    width: max-content;
+    background-color: #ffaa00;
+    color: #4a3100;
+    border: 1px solid #ac7200;
+    font-size: var(--small-font-size);
+    font-family: var(--font-bold);
+    text-transform: uppercase;
+    border-radius: 20px 2px 20px 2px;
+}
+
+.dish-container .dish-informations-container .dish-secondary-informations{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dish-container .dish-informations-container .dish-information{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dish-container .dish-informations-container .dish-rating-container{
+    display: flex;
+    align-items: center;
+}
+
+.dish-container .dish-informations-container .dish-information svg path{
+    stroke: var(--secondary-text-color);
+}
+
+.dish-container .dish-informations-container .recipe-path-container{
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.dish-container .dish-informations-container .recipe-path-container .recipe-path-button{
+    position: relative;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background: var(--element-bg-color);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.dish-container .dish-informations-container .recipe-path-container .recipe-path-button:hover{
+    top: 5px;
+}
+
+.dish-container .dish-informations-container .recipe-path-container .recipe-path-button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+    background: #000;
+    z-index: -1;
+}
+
+.dish-container .dish-informations-container .recipe-path-container .recipe-path-button:hover::before{
+    bottom: 0;
+}

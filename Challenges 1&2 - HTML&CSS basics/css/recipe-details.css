@@ -1,0 +1,139 @@
+.dish-image-container{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+}
+
+.dish-image-container .dish-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.dish-image-container::before{
+    content: "recette du moment";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    width: max-content;
+    background-color: #ffaa00;
+    color: #4a3100;
+    border: 1px solid #ac7200;
+    font-size: var(--small-font-size);
+    font-family: var(--font-bold);
+    text-transform: uppercase;
+    border-radius: 20px 2px 20px 2px;
+}
+
+.dish-main-informations{
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.dish-main-informations .dish-rating-container{
+    display: flex;
+    align-items: center;
+}
+
+.dish-main-informations .dish-title{
+    text-align: center;
+    margin: 0;
+}
+
+.dish-main-informations .dish-description{
+    text-align: center;
+    padding: 0 150px;
+    margin: 0;
+}
+
+.recipe-container{
+    padding: 0 30px 30px 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.recipe-container .recipe-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recipe-container .recipe-content .content{
+    background-color: var(--element-bg-color);
+    padding: 10px 30px;
+    border-radius: 20px;
+}
+
+.recipe-container .recipe-content.left-content{
+    width: 30%;
+}
+
+.recipe-container .recipe-content.right-content{
+    width: 70%;
+}
+
+.recipe-container .recipe-content .upper-content{
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 30px;
+}
+
+.recipe-container .recipe-content .bottom-content{
+    border-top: 1px solid #e6e6e6;
+    margin-top: 30px;
+    padding: 20px 0;
+    display: flex;
+    gap: 30px;
+}
+
+.recipe-container .ingredients-container{
+    position: sticky;
+    top: 30px;
+}
+
+.recipe-container .content.nutrition{
+    border: 1px solid #000;
+    border-bottom: 8px solid #000;
+}
+
+.recipe-container .content.nutrition .main-content{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    .recipe-container .recipe-content.left-content {
+        width: 35%;
+    }
+
+    .recipe-container .recipe-content.right-content {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .dish-main-informations{
+        padding: 70px 20px;
+    }
+
+    .dish-main-informations .dish-description{
+        padding: 0 20px;
+    }
+
+    .recipe-container{
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .recipe-container .recipe-content.left-content,
+    .recipe-container .recipe-content.right-content{
+        width: 100%;
+    }
+}

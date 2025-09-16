@@ -1,0 +1,109 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: var(--body-bg-color);
+}
+
+html{
+    font-size: 25px;
+}
+
+:root{
+    --font-bold: 'font bold';
+    --font-medium: 'font medium';
+
+    --big-font-size: 1.8rem;
+    --medium-font-size: 1rem;
+    --small-font-size: 0.65rem;
+
+    --body-bg-color: #e6e6e6;
+    --element-bg-color: #fff;
+    --main-text-color: #222;
+    --secondary-text-color: #797979;
+}
+
+/*-------- Font family --------*/
+
+@font-face {
+    font-family: 'font bold';
+    src: url('../fonts/ClashGrotesk-Bold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'font medium';
+    src: url('../fonts/ClashGrotesk-Medium.otf') format('opentype');
+}
+
+.font-bold{
+    font-family: var(--font-bold);
+}.font-medium{
+    font-family: var(--font-medium);
+}
+
+/*-------- Font sizes --------*/
+
+.xl-font-size{
+    font-size: var(--big-font-size);
+}.m-font-size{
+    font-size: var(--medium-font-size);
+}.s-font-size{
+    font-size: var(--small-font-size);
+}
+
+h1{
+    font-size: var(--big-font-size);
+    font-weight: 100;
+}
+
+h2{
+    font-size: var(--medium-font-size);
+    font-weight: 100;
+}
+
+/*-------- Font colors --------*/
+
+.main-text-color{
+    color: var(--main-text-color);
+}.secondary-text-color{
+    color: var(--secondary-text-color);
+}
+
+/*-------- Others --------*/
+
+ul{
+    padding: 0 20px;
+}
+
+ol{
+    padding: 0;
+}
+
+li{
+    margin-top: 10px;
+    margin-top: 15px;
+}
+
+ol li{
+    position: relative;
+    list-style: none;
+    counter-increment: index;
+    margin-left: 35px;
+}
+
+ol li::before{
+    content: counter(index);
+    position: absolute;
+    top: 0;
+    left: -35px;
+    color: var(--main-text-color);
+    margin-right: 10px;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid var(--main-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
